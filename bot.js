@@ -1,3 +1,16 @@
+const http = require('http');
+const express = require('express');
+const app = express();
+
+// Запускаем сервер (Render будет считать, что это сервис, слушающий порт)
+const server = http.createServer(app);
+server.listen(process.env.PORT || 3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+
+
+
 require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
