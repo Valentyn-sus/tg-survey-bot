@@ -1,10 +1,12 @@
-# Telegram Survey Bot
+# Telegram Survey & Questionnaire Bot
 
-A simple Telegram bot built with Node.js that conducts a short user survey and saves the results.
+A lightweight, asynchronous Telegram bot built with the `node-telegram-bot-api` library designed to conduct step-by-step multi-user surveys and record feedback.
 
-## Features
+##  Key Features
+- **Session-Based State Management:** Uses an in-memory user-state map to safely handle continuous conversation flows and map answers to specific active users.
+- **Dynamic File Persistence:** Automatically creates, reads, and updates an answers storage file (`answers.json`) ensuring persistent records without database overhead.
+- **Interactive UI:** Leverages custom reply keyboards with automatic layout adjustments to guide users through multiple-choice selections.
 
-- Interactive multi-step survey
-- Custom keyboard buttons (Yes / No)
-- Saves user answers in a JSON file
-- Written using [node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api)
+##  Tech Stack
+- **Backend:** Node.js, JavaScript (ES6+)
+- **API & Libraries:** node-telegram-bot-api, Native File System (`fs`)
